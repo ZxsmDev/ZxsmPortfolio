@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: rgb(16, 13, 49);
+  --color-fg:rgb(8, 4, 34);
+  --color-text: #6dd2e8;
+  --color-header:rgb(139, 120, 214);
+  --color-text-2: #b6cce6;
+}
+
+body {
+  background-image: url("./images/Background.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--color-text-2);
+}
