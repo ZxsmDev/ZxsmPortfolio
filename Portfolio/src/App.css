@@ -9,9 +9,59 @@
 }
 
 body {
-  background-image: url("./images/Background.jpeg");
+  background-color: #000;
+  background-image: url("/assets/Background.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: var(--color-text-2);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-fg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-header);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text);
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-header) var(--color-fg);
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 125px;
+  background-color: var(--color-fg);
+  color: var(--color-text-2);
+  text-align: center;
+  padding: 5px 8px;
+  border-radius: 8px;
+  position: absolute;
+  z-index: 1;
+  top: 110%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }

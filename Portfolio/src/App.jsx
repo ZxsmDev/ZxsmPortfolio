@@ -3,42 +3,57 @@ import Home from "./components/Home";
 import AboutMe from "./components/About Me";
 import Projects from "./components/Projects";
 import Devlogs from "./components/Devlogs";
-import Resume from "./components/Resume";
-import hellOrbitImage from "./images/ProjectBanners/HellOrbit.png";
 import "./App.css";
 
-function App() {
-  const projects = [
-    {
-      name: "Hell Orbit",
-      description: "Fast-paced JS browser roguelike.",
-      image: hellOrbitImage,
-      tech: {
-        JavaScript: "text-yellow-500",
-        P5js: "text-pink-800",
-        Bootstrap5: "text-purple-800",
-        FontAwesome: "text-blue-500",
-      },
-      repo: "https://github.com/ZxsmDev/HellOrbit",
-    },
-  ];
+import projectData from "./data/projects.json";
 
-  const pages = ["About Me", "Projects", "Devlogs", "Resume"];
+import {
+  faGithub,
+  faXTwitter,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
+
+function App() {
+  const projects = projectData;
+
+  const pages = ["About Me", "Projects", "Devlogs"];
+
   const lastThreeProjects = projects.slice(-3).map((project) => ({
     ...project,
   }));
+
+  const lastFiveDevlogs = projects.map((project) => ({
+    name: project.name,
+    devlogs: project.devlogs.slice(0, 5).map((log) => ({
+      logNumber: log.logNumber,
+      content: log.content,
+      date: log.date,
+    })),
+  }));
+
+  const links = [
+    { name: "Github", link: "https://github.com/ZxsmDev", icon: faGithub },
+    { name: "LinkedIn", link: "https://www.linkedin.com", icon: faLinkedin },
+    { name: "Twitter", link: "https://twitter.com", icon: faXTwitter },
+  ];
 
   return (
     <BrowserRouter>
       <Routes>
         <Route
           path="/"
-          element={<Home pages={pages} lastThreeProjects={lastThreeProjects} />}
+          element={
+            <Home
+              pages={pages}
+              lastThreeProjects={lastThreeProjects}
+              links={links}
+              lastFiveDevlogs={lastFiveDevlogs}
+            />
+          }
         />
         <Route path="/About Me" element={<AboutMe />} />
         <Route path="/projects" element={<Projects projects={projects} />} />
         <Route path="/devlogs" element={<Devlogs />} />
-        <Route path="/resume" element={<Resume />} />
       </Routes>
     </BrowserRouter>
   );

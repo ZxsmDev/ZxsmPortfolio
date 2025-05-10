@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Hell Orbit",
+    "description": "A top-down arcade-style boss fight roguelike developed using p5.js. Dodge incoming attacks whilst managing your own attacks. Includes upgrade mechanics, dynamic attack logic, and multiple bullet patterns.",
+    "image": "/assets/projectbanners/HellOrbit.png",
+    "tech": { 
+      "JavaScript": "text-yellow-500",
+      "P5.js": "text-pink-800",
+      "Bootstrap 5": "text-purple-800",
+      "FontAwesome": "text-blue-500"
+    },
+    "repo": "https://github.com/ZxsmDev/HellOrbit",
+    "devlogs": [
+      {
+        "logNumber": "1",
+        "content":
+          "Added a variety of different attack patterns for the bosses. Each boss has a unique attack pattern that is determined randomly with weight. Added Health bars for the bosses and the player.",
+        "date": "2025-05-01"
+      },
+      {
+        "logNumber": "2",
+        "content":
+          "Created a Game Manager to handle the game state and other global necessities. Changed the attack patterns to be more dynamic and less random.",
+        "date": "2025-05-02"
+      },
+      {
+        "logNumber": "3",
+        "content":
+          "Various bug fixes and optimizations. Added a new upgrade system that allows the player to choose upgrades after each boss fight (WIP). Created a UI class to handle the UI elements.",
+        "date": "2025-05-03"
+      },
+      {
+        "logNumber": "4",
+        "content":
+          "Made some visual changes to the game. Added a new background and some new UI elements. Added a new boss with a unique attack pattern. Made plans for refactoring the code to be more modular and easier to read.",
+        "date": "2025-05-04"
+      },
+      {
+        "logNumber": "5",
+        "content":
+          "Restarted from scratch. Implemented a new game loop and a new way to handle the game using 1 global variable and implemented more classes (WIP).",
+        "date": "2025-05-05"
+      },
+      {
+        "logNumber": "6",
+        "content":
+          "Migrated the old code to the new game loop. Bug fixes and optimizations and changes to the base game mechanics.",
+        "date": "2025-05-05"
+      },
+      {
+        "logNumber": "7",
+        "content":
+          "Small logic changes and bug fixes. Added a screen vignette effect to the game to add more interest.",
+        "date": "2025-05-06"
+      },
+      {
+        "logNumber": "8",
+        "content":
+          "Massive visual overhaul: Healthbars, Credit Counter, Upgrade Buttons, Kill Count. Player attacking that locks to the boss. Upgrade System mostly implemented. Infinite replayability with boss counter. MOST UI elements are fully responsive to window size.",
+        "date": "2025-05-06"
+      },
+      {
+        "logNumber": "9",
+        "content":
+          "Random bug fixes and optimizations. Speed and Health Regen stat displays. Added hit indicators for the player and the bosses.",
+        "date": "2025-05-07"
+      },
+      {
+        "logNumber": "10",
+        "content":
+          "Final visual update, player and boss redesign. Shield bullet functions properly now.",
+        "date": "2025-05-07"
+      },
+      {
+        "logNumber": "11",
+        "content":
+          "Finalized and polished the game, ready for release.",
+        "date": "2025-05-08"
+      }
+    ]
+  }
+]
